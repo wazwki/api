@@ -1,0 +1,30 @@
+host: localhost:8080
+info:
+  contact: {}
+  description: Name API documentation
+  termsOfService: http://swagger.io/terms/
+  title: Name API
+  version: "1.0"
+paths:
+  /api/v1/name/healthcheck:
+    get:
+      consumes:
+      - application/json
+      description: Healthcheck
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Healthcheck
+swagger: "2.0"
