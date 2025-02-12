@@ -1,4 +1,4 @@
-module github.com/wazwki/skillsrock
+module github.com/wazwki/api
 
 go 1.23.2
 
@@ -44,6 +44,8 @@ require (
 	github.com/swaggo/files/v2 v2.0.2 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
+	go.opentelemetry.io/otel/metric v1.32.0 // indirect
+	go.opentelemetry.io/otel/trace v1.32.0 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
 	golang.org/x/net v0.34.0 // indirect
@@ -51,7 +53,7 @@ require (
 	golang.org/x/sys v0.30.0 // indirect
 	golang.org/x/text v0.22.0 // indirect
 	golang.org/x/tools v0.29.0 // indirect
-	google.golang.org/protobuf v1.34.2 // indirect
+	google.golang.org/protobuf v1.36.5 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

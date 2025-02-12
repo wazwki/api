@@ -8,9 +8,9 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	echoSwagger "github.com/swaggo/echo-swagger"
-	"github.com/wazwki/skillsrock/internal/config"
-	"github.com/wazwki/skillsrock/internal/controllers/rest/middlewares"
-	"github.com/wazwki/skillsrock/pkg/jwtutil"
+	"github.com/wazwki/api/internal/config"
+	"github.com/wazwki/api/internal/controllers/rest/middlewares"
+	"github.com/wazwki/api/pkg/jwtutil"
 )
 
 func NewEchoServer(cfg *config.Config, jwt *jwtutil.JWTUtil) *echo.Echo {

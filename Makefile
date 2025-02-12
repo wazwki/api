@@ -22,4 +22,4 @@ run: lint test build up
 	@echo "Сервис успешно запущен!"
 
 swagger:
-	swag init -g cmd/main.go -o docs
+	swag init -g cmd/main.go -o api/docs

@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/wazwki/skillsrock/internal/repository"
+	"github.com/wazwki/api/internal/repository"
 )
 
 type NameService struct {

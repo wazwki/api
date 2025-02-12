@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
-	"github.com/wazwki/skillsrock/internal/controllers/rest"
-	"github.com/wazwki/skillsrock/internal/service"
+	"github.com/wazwki/api/internal/controllers/rest"
+	"github.com/wazwki/api/internal/service"
 )
 
 type NameControllers struct {

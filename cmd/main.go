@@ -6,9 +6,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	_ "github.com/wazwki/skillsrock/docs"
-	"github.com/wazwki/skillsrock/internal/app"
-	"github.com/wazwki/skillsrock/internal/config"
+	_ "github.com/wazwki/api/api/docs"
+	"github.com/wazwki/api/internal/app"
+	"github.com/wazwki/api/internal/config"
 )
 
 // @title Name API

@@ -6,10 +6,10 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v4"
-	"github.com/wazwki/skillsrock/internal/config"
-	"github.com/wazwki/skillsrock/pkg/jwtutil"
-	"github.com/wazwki/skillsrock/pkg/logger"
-	"github.com/wazwki/skillsrock/pkg/metrics"
+	"github.com/wazwki/api/internal/config"
+	"github.com/wazwki/api/pkg/jwtutil"
+	"github.com/wazwki/api/pkg/logger"
+	"github.com/wazwki/api/pkg/metrics"
 	"go.uber.org/zap"
 )
 
