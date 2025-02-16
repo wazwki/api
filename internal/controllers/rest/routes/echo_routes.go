@@ -10,5 +10,5 @@ func RegisterRoutes(e *echo.Echo, controllers rest.NameControllersInterface) {
 	v1 := api.Group("/v1")
 
 	name := v1.Group("/name")
-	name.GET("/name/healthcheck", controllers.HealthCheck)
+	name.GET("/healthcheck", controllers.HealthCheck)
 }

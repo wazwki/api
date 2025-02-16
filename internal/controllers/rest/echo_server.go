@@ -16,7 +16,10 @@ import (
 func NewEchoServer(cfg *config.Config, jwt *jwtutil.JWTUtil) *echo.Echo {
 	srv := echo.New()
 	srv.HideBanner = true
-	srv.GET("/swagger/*", echoSwagger.WrapHandler)
+
+	if cfg.Debug {
+		srv.GET("/swagger/*", echoSwagger.WrapHandler)
+	}
 	srv.GET("/metrics", echo.WrapHandler(promhttp.Handler()))
 
 	srv.Use(

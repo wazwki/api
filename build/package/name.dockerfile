@@ -6,7 +6,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=0 go build -o name ./cmd/main.go
+RUN CGO_ENABLED=0 go build -o name ./cmd/name/main.go
 
 FROM alpine:3.18
 

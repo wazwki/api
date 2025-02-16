@@ -3,9 +3,9 @@ version: '3.8'
 services:
   name:
     build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: name
+      context: ../../
+      dockerfile: build/package/debug.dockerfile
+    container_name: debug
     environment:
       - JWT_ACCESS_SECRET=your_access_secret
       - JWT_REFRESH_SECRET=your_refresh_secret
@@ -24,14 +24,17 @@ services:
       - REDIS_PASSWORD=
       - REDIS_NUMBER=0
       - DEBUG=${DEBUG}
+    ports:
+      - "8080:8080"
     depends_on:
       - postgres
       - redis
       - prometheus
       - grafana
       - node-exporter
-    ports:
-      - "8080:8080"
+    volumes:
+      - ../../:/app
+    restart: always
 
   postgres:
     image: postgres:latest
@@ -57,7 +60,7 @@ services:
     image: prom/prometheus:latest
     container_name: prometheus
     volumes:
-      - ./prometheus.yaml:/etc/prometheus.yaml
+      - ../../config/prometheus/prometheus.yaml:/etc/prometheus.yaml
     command:
       - '--config.file=/etc/prometheus.yaml'
     ports:
